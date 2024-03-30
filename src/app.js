@@ -99,9 +99,7 @@ app.onError((error, c) => {
         <h1>Error</h1>
         <h2>${error.name} (${statusCode})</h2>
         <p>${error.message}</p>
-        ${NODE_ENV === "development"
-          ? html`<pre>${error.stack}</pre>`
-          : ""}
+        ${NODE_ENV === "development" ? html`<pre>${error.stack}</pre>` : ""}
       `,
     ),
     statusCode,
